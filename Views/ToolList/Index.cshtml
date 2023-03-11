@@ -1,0 +1,69 @@
+﻿
+
+
+@model Entities.Models.ViewModels.ToolListViewModel
+
+
+<div id="toolviews"></div>
+@*
+<div id="divTools" class="text-center;" style="height: 565px;">*@
+
+    <div id="divTools" class="text-center;">
+    <div class="container">
+        <div class="row">
+
+@*                    <div style="height: 100px;"></div>
+                    <h1>@Model.CurrentToolCategory </h1>
+                    <partial name="_ToolListCard" />*@
+
+
+                    <div style="height: 5px;"></div>
+            @*<div style="color: @(Model.CategoryColor)" align="center"><h1>@Model.CurrentToolCategory</h1></div>*@
+
+
+            <div style="color: white" align="center"><h1>@Model.CurrentToolCategory</h1></div>
+            <div style="height: 25px;"></div>
+
+
+            
+@*            <select multiple="single" asp-for="@Model.DdlOrderByPrice" asp-items="@Model.DdlOrderByPrice">Select an option</select>
+*@
+            @Html.DropDownListFor(m=> m.DdlOrderByPrice, Model.DdlOrderByPrice, "select an option")
+
+            <div id="Container-ToolList">
+                <partial name="_ToolListCard" />
+            </div>
+            
+
+            
+
+            </div>
+        </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript" >
+        $("#DdlOrderByPrice").on("change", function(){
+            var selectedoption = $(this).val();
+
+            console.log("selectedvalue " + selectedoption);
+            console.log({
+                selected_order_by: selectedoption
+            });
+
+            $.ajax({
+                url: "/toollist/RefreshToolList", 
+                contentType:"application/html; charset=utf-8",
+                type:"GET",
+                dataType:"html",
+                data: { Id: "@Model.ToolListID", priceorderby: selectedoption},
+                  success: function(data){
+                                $("#Container-ToolList").html(data);
+                            },
+                error: function () {
+                    $("#Container-ToolList").html("error occurred while refreshing");
+                }
+            });         
+        });
+    </script>
+}

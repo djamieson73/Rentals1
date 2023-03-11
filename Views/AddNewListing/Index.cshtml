@@ -1,0 +1,65 @@
+﻿@model Entities.Models.ViewModels.AddNewListingViewModel
+
+
+<form method="post" action="/AddNewListing/AddNewListingPost" role="form">
+
+    <div style="height: 20px;"></div>
+    <div class="container d-flex justify-content-center">
+        <div class="row border border-4 border-info" style="width: 500px; height: 475px; background-color: #E28BA5; border-radius: 14px;">
+            <div class="col-12">
+                <div style="height: 20px;"></div>
+                <div style="color: White" class="d-flex justify-content-center"><h1>List Your Rental</h1></div>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <div class="row">
+                            <div class="col-12">
+                                <label>Select a Category</label>
+                                    @Html.DropDownListFor(x => Model.AllCategories, new SelectList(Model.AllCategories, "Id", "CatName"), htmlAttributes: new { @class = "form-control", id = "ddlCategory"})
+                            </div>
+                            <div class="col-12">
+                                <label>Select Your Tool</label>
+                                    @Html.DropDownListFor(x => Model.AllCategories, new SelectList(Model.AllTools, "Id", "ToolName"), htmlAttributes: new { @class = "form-control", id = "ddlTool"})
+                            </div>
+                            <div class="col-12">
+                                <label>Enter Daily Price</label>
+                                   <input asp-for="Price" width="5px" class="form-control" type="text" data-val="true" data-val-required="The Price field is required" />
+                            </div>
+                            <div class="col-12">
+                                <label>Name Brand and Model</label>
+                                <input asp-for="Description" class="form-control" type="text" data-val="true" data-val-required="The Description field is required" />
+                            </div>
+                            <div class="col-12">
+                                <label>Upload a Photo</label>
+                                @*<input asp-formaction="FileUpload.FormFile" class="form-control" type="file" />*@
+
+                                <input asp-for="Photo" class="custom-file-input form-control">
+
+
+                    </div>
+
+                            <div class="col-12">
+                                <div style="height: 15px;"></div>
+
+                                 <button style="width: 85px; background-color: #88B9DD; border-radius: 15px; color: white; height: 40px; border-style: none;" type="submit">Submit</button>
+
+                            </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

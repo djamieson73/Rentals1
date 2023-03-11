@@ -1,0 +1,21 @@
+﻿
+
+
+        @model Entities.Models.ViewModels.ToolViewModel
+
+
+<div id="toolviews"></div>
+@*
+<div id="divTools" class="text-center;" style="height: 565px;">*@
+    
+    <div id="divTools" class="text-center;">
+    <div class="container">
+        <div class="row">
+                    <div style="height: 5px;"></div>
+            @*<div style="color: @(Model.CategoryColor)" align="center"><h1>@Model.CurrentCategory Tools</h1></div>*@
+            <div style="color: white" align="center"><h1>@Model.CatName Tools</h1></div>
+            <div style="height: 5px;"></div>
+                    <partial name="_ToolCard" />
+            </div>
+        </div>
+</div>

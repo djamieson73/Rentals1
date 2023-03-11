@@ -1,0 +1,81 @@
+﻿
+@foreach (var cat in Model)
+{
+
+    <div class="col-4 align-middle">
+
+        <a asp-controller=Tool asp-route-id="@(cat.Id)" asp-action=Index class=”nav-link”>
+            <div class="d-flex align-items-center justify-content-center" style="width: 100%; height: 75%; background-color: @(cat.Color);">
+                <img class="NO-CACHE" id="cursorimage1" alt="Tools" src="~/img/@(cat.CatName.Substring(0, 1)).jpg" />
+            </div>
+        </a>
+
+        <div style="height: 10px;"></div>
+
+        <div class="d-flex align-items-center justify-content-center">
+           <h4 style="color: @(cat.Color)">@(cat.Title)</h4>
+        </div>
+
+        @*<div class="d-flex align-items-center">*@
+        <div class="d-flex align-items-center justify-content-center">
+            <h6 style="color: @(cat.Color)">@(cat.Description)</h6>
+        </div>
+
+    </div>
+
+
+
+
+
+@*    <div class="col-4 align-middle">
+
+        <a href="">
+            <div class="d-flex align-items-center justify-content-center" style="width: 100%; height: 75%; background-color: #E28BA5;">
+                <img class="NO-CACHE" id="cursorimage1" alt="Tools" src="~/img/p.jpg" />
+            </div>
+        </a>
+    </div>
+
+
+
+    <div class="col-4 align-middle">
+        <a href="">
+            <div class="d-flex align-items-center justify-content-center" style="width: 100%; height: 75%; background-color: #88B9DD;">
+                <img class="NO-CACHE" id="cursorimage1" alt="Tools" src="~/img/i.jpg" />
+            </div>
+        </a>
+    </div>*@
+
+
+@*    <div style="text-align: center" runat="server" class="col-4 mb-0">
+        <div class="card; bg-transparent">
+            <div id="shadowheader@(cat.Id)" class="c-card" style="height: 280px;">
+                @*<img class="NO-CACHE" id="cursorimage@(cat.Id)" alt="@(cat.CatName) @(cat.Alt)" src="~/img/@(cat.CatName).jpg" />*@
+
+             @*   <a asp-controller=Tool asp-route-id="@(cat.Id)" asp-action=Index class=”nav-link”>
+                    <img class="NO-CACHE" alt="@(cat.CatName) @(cat.Alt)" src="~/img/@(cat.CatName).jpg" />
+                </a>*@
+
+@*                <script>
+                    $("#cursorimage" + @(cat.Id)).click(function () {
+                        $("#toolviews").load('/category/DoPartial', { id: @(cat.Id) });
+                        $("#divCategories").hide();
+                    });
+                </script>*@
+              @*  <div style="height: 7px;"></div>
+                <h5 id="WhiteTitle1" class="c-card-title">@(cat.Title)</h5>
+                <h6 id="WhiteTitle2" class="c-card-subtitle">@(cat.Description)</h6>
+            </div>
+        </div>
+    </div>*@
+}
+
+
+
+
+
+
+
+
+
+

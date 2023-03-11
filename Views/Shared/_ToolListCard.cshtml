@@ -1,0 +1,52 @@
+﻿@model Entities.Models.ViewModels.ToolListViewModel
+
+
+<script>
+    $(document).ready(function () {
+        $('.NO-CACHE').attr('src', function () { return $(this).attr('src') + "?a=" + Math.random() });
+    });
+</script>
+
+
+
+
+@foreach (var cat in Model.ToolList)
+{
+    <div id="divtest" style="text-align: center" runat="server" class="col-4 mb-0">
+        <div class="card; bg-transparent">
+            <div id="shadowheader" class="c-card" style="height: 208px;">
+
+                @*<a asp-controller=ToolList asp-route-id="@(cat.Id)" asp-action=Index class=”nav-link”>*@
+                    <img class="NO-CACHE" src="~/img/user_img/@(cat.Id).jpg" />
+                @*</a>*@
+
+                <div style="height: 5px;"></div>
+
+                <div>
+                    <label style="font-size: medium; font-weight: bold; color: white">@(cat.Description)</label><br>
+                    <label style="font-size: medium; font-weight: bold; color: white">$ @(cat.Price)</label>
+                </div>
+
+                <div style="height: 7px;"></div>
+
+
+            </div>
+        </div>
+
+
+        <div>
+            <div style="height: 15px;"></div>
+            <a style="width: 55px; background-color: #E28BA5; color: white" asp-controller=AddRequest asp-route-id="@(cat.Id)" asp-action=Index class="nav-link; btn btn-sm btn-success">
+                Rent
+            </a>
+
+            <a style="width: 55px; background-color: #EDBA7E; color: white" asp-controller=AddNewListing asp-action=Index class="nav-link; btn btn-sm btn-success">
+                List
+            </a>
+            <div style="height: 15px;"></div>
+        </div>
+
+        <div style="height: 25px;"></div>
+
+    </div>
+}
