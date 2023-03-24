@@ -9,6 +9,12 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace WebApplication9.Controllers
 {
+	//This controller is an API which does the following
+		// Displays all tool listings
+		// Allows you to edit or delete tool listing price and description
+		// Allows you to delete listing
+		// Allows you to add/update listing
+
 	public class ListingAPIController : Controller
 	{
 
@@ -27,23 +33,6 @@ namespace WebApplication9.Controllers
 
 			return View();
 		}
-
-
-
-        //private ToolList? DeserializeUsingGenericSystemTextJson(string json)
-        //{
-        //    var toollist = System.Text.Json.JsonSerializer.Deserialize<ToolList>(json, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-        //    return toollist;
-        //}
-
-        //private ToolList? DeserializeUsingNewtonSoftJson(string json)
-        //{
-        //    var toollist = JsonConvert.DeserializeObject<ToolList>(json);
-        //    return toollist;
-        //}
-
-
-
 
 
 

@@ -1,7 +1,7 @@
 ﻿@model Entities.Models.ViewModels.AddNewListingViewModel
 
 
-<form method="post" action="/AddNewListing/AddNewListingPost" role="form">
+<form method="post" asp-action="FormsTestPost" asp-controller="AddNewListing" enctype="multipart/form-data">
 
     <div style="height: 20px;"></div>
     <div class="container d-flex justify-content-center">
@@ -14,11 +14,11 @@
                 <div class="row">
                             <div class="col-12">
                                 <label>Select a Category</label>
-                                    @Html.DropDownListFor(x => Model.AllCategories, new SelectList(Model.AllCategories, "Id", "CatName"), htmlAttributes: new { @class = "form-control", id = "ddlCategory"})
+                                    @Html.DropDownListFor(x => Model.CatId, new SelectList(Model.AllCategories, "Id", "CatName"), "Select a Category ...", htmlAttributes: new { @class = "form-control", id = "ddlCategory"})
                             </div>
                             <div class="col-12">
                                 <label>Select Your Tool</label>
-                                    @Html.DropDownListFor(x => Model.AllCategories, new SelectList(Model.AllTools, "Id", "ToolName"), htmlAttributes: new { @class = "form-control", id = "ddlTool"})
+                                    @Html.DropDownListFor(x => Model.ToolId, new SelectList(Model.AllTools, "Id", "ToolName"), htmlAttributes: new { @class = "form-control", id = "ddlTool"})
                             </div>
                             <div class="col-12">
                                 <label>Enter Daily Price</label>
@@ -31,6 +31,8 @@
                             <div class="col-12">
                                 <label>Upload a Photo</label>
                                 @*<input asp-formaction="FileUpload.FormFile" class="form-control" type="file" />*@
+
+
 
                                 <input asp-for="Photo" class="custom-file-input form-control">
 
@@ -53,6 +55,33 @@
 
 
 
+
+
+
+@section Scripts{
+    <script type="text/javascript">
+        $("#ddlCategory").on("change", function(){
+        var selectedvalue = $(this).val();
+
+        $.ajax({
+        url: "/addnewlisting/GetToolList",
+        type:"GET",
+        dataType:"json",
+        data: { CatId: selectedvalue},
+        success: function(data){
+        console.log({tool_list_data:data});
+        var options = "";
+           $(data).each(function(key, value){
+              options += "<option value='"+ value.id +"'>"+ value.toolName +"</option>"
+           });
+                    $("#ddlTool").html(options);
+        },
+        error: function () {
+        }
+        });
+        });
+    </script>
+}
 
 
 

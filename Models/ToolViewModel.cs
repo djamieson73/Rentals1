@@ -8,9 +8,6 @@ namespace Entities.Models.ViewModels
 {
     public class ToolViewModel
     {
-        //public Category? CurrentCategory { get; }
-        //public ToolViewModel(IEnumerable<Tool> tools1, Category? currCategory1)
-
 
         public IEnumerable<Tool> Tools { get; }
 

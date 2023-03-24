@@ -24,13 +24,6 @@ img {
 
 
 
-
-#cardbackgroundColor {
-    background-color: antiquewhite;
-    border: 0px;
-    /*//////////////////////////////////////////////////////////////*/
-}
-
 .textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -39,17 +32,6 @@ img {
 }
 
 
-/*a.navbar-brand {
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
-}*/
-
-#CenterText {
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
-}
 
 a {
     color: #0077cc;
@@ -92,10 +74,7 @@ button.accept-policy {
     line-height: 60px;
 }
 
-      /*  //////////////////////////////////////////////////////////*/
 
-
-}
 
 .items {
     display: flex;
@@ -149,100 +128,5 @@ button.accept-policy {
 #cursorimage1 {
     cursor: pointer
 }
-#cursorimage2 {
-    cursor: pointer
-}
-#cursorimage3 {
-    cursor: pointer
-}
-
-
-
-
-
-#shadowheader1Tool {
-    background-color: #0A6B80;
-    margin: 10px auto; /* just to center the div for diaplay purposes */
-    -moz-box-shadow: 5px 5px 5px 0px #000;
-    -webkit-box-shadow: 5px 5px 5px 0px #000;
-    box-shadow: 5px 5px 5px 0px #000;
-    margin-bottom: 5px;
-    text-align: center;
-    word-wrap: break-word;
-    display: inline-block;
-    width: 170px;
-    /*height: 228px;*/
-}
-
-#shadowheader2Tool {
-    background-color: #BF1A26;
-    margin: 10px auto; /* just to center the div for diaplay purposes */
-    -moz-box-shadow: 5px 5px 5px 0px #000;
-    -webkit-box-shadow: 5px 5px 5px 0px #000;
-    box-shadow: 5px 5px 5px 0px #000;
-    margin-bottom: 5px;
-    text-align: center;
-    word-wrap: break-word;
-    display: inline-block;
-    width: 170px;
-    height: 228px;
-}
-
-#shadowheader3Tool {
-    background-color: #055CFE;
-    margin: 10px auto; /* just to center the div for diaplay purposes */
-    -moz-box-shadow: 5px 5px 5px 0px #000;
-    -webkit-box-shadow: 5px 5px 5px 0px #000;
-    box-shadow: 5px 5px 5px 0px #000;
-    margin-bottom: 5px;
-    text-align: center;
-    word-wrap: break-word;
-    display: inline-block;
-    width: 170px;
-    height: 228px;
-}
-
-
-.centerx {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-}
-
-
-
-#mainbackgrounds {
-    /*    background-image: url("~/wwwroot/img/background.jpg");*/
-
-/*    background-image: url('~/img/background.jpg'); height: 100px;
-    width: 100px;*/
-
-    background-color: red;
-}
-
-
-/*.catsandstars {
-    background-image: url("startransparent.gif"), url("catfront.png");
-    background-color: transparent;
-}*/
-
-
-
-.square {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    padding-bottom: 100%;  
-    /*margin: 1.66%*/
-    /*background-position: center center;*/*/
-    /*background-repeat: no-repeat;
-    background-size: cover;*/ /* you change this to "contain" if you don't want the images to be cropped */
-    /*overflow: hidden*/
-}
-
-
-
-
-
 
 

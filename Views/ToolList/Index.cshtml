@@ -5,29 +5,16 @@
 
 
 <div id="toolviews"></div>
-@*
-<div id="divTools" class="text-center;" style="height: 565px;">*@
+
 
     <div id="divTools" class="text-center;">
     <div class="container">
         <div class="row">
 
-@*                    <div style="height: 100px;"></div>
-                    <h1>@Model.CurrentToolCategory </h1>
-                    <partial name="_ToolListCard" />*@
-
-
-                    <div style="height: 5px;"></div>
-            @*<div style="color: @(Model.CategoryColor)" align="center"><h1>@Model.CurrentToolCategory</h1></div>*@
-
-
+            <div style="height: 5px;"></div>
             <div style="color: white" align="center"><h1>@Model.CurrentToolCategory</h1></div>
             <div style="height: 25px;"></div>
 
-
-            
-@*            <select multiple="single" asp-for="@Model.DdlOrderByPrice" asp-items="@Model.DdlOrderByPrice">Select an option</select>
-*@
             @Html.DropDownListFor(m=> m.DdlOrderByPrice, Model.DdlOrderByPrice, "select an option")
 
             <div id="Container-ToolList">

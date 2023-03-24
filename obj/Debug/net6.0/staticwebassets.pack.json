@@ -13,40 +13,8 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\RLogo.jpg",
-      "PackagePath": "staticwebassets\\img\\RLogo.jpg"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\RRlogo.jpg",
-      "PackagePath": "staticwebassets\\img\\RRlogo.jpg"
-    },
-    {
       "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\RRlogo1.jpg",
       "PackagePath": "staticwebassets\\img\\RRlogo1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\asdfasdfasdf.htm",
-      "PackagePath": "staticwebassets\\img\\asdfasdfasdf.htm"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\asdfasdfasdf_r1_c1.gif",
-      "PackagePath": "staticwebassets\\img\\asdfasdfasdf_r1_c1.gif"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\asdfasdfasdf_r2_c1.gif",
-      "PackagePath": "staticwebassets\\img\\asdfasdfasdf_r2_c1.gif"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\asdfasdfasdf_r2_c2.gif",
-      "PackagePath": "staticwebassets\\img\\asdfasdfasdf_r2_c2.gif"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\asdfasdfasdf_r2_c3.gif",
-      "PackagePath": "staticwebassets\\img\\asdfasdfasdf_r2_c3.gif"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\asdfasdfasdf_r3_c2.gif",
-      "PackagePath": "staticwebassets\\img\\asdfasdfasdf_r3_c2.gif"
     },
     {
       "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\augers.jpg",
@@ -139,10 +107,6 @@
     {
       "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\saws.jpg",
       "PackagePath": "staticwebassets\\img\\saws.jpg"
-    },
-    {
-      "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\spacer.gif",
-      "PackagePath": "staticwebassets\\img\\spacer.gif"
     },
     {
       "Id": "C:\\Users\\darry\\source\\WebProject2023-1\\WebApplication9\\wwwroot\\img\\steam cleaners.jpg",

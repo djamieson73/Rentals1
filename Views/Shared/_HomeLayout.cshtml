@@ -1,20 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Identity
 
-
-
-
-
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-@*@model IndexModel*@
 @{
     ViewData["Title"] = "Category page";
 }
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +28,6 @@
     <link rel="stylesheet" href="~/WebApplication9.styles.css" asp-append-version="true" />
 </head>
 
-
-
-@*<body style="background-image: url(/img/background.jpg);" height: 100vh>*@
 <body style="background-color: #FDFDFD;" height: 100vh>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -52,10 +40,8 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            @*<a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>*@
                         </li>
                         <li class="nav-item">
-                            @*<a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>*@
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -63,14 +49,7 @@
             </div>
         </nav>
     </header>
-    @*    @if (User.IsInRole("Employee"))
-    {
-    <p>I am an Employee!</p>
-    }
-    else
-    {
-    <p>I am NOT an Employee!</p>
-    }*@
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

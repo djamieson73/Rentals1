@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,20 @@ namespace Entities.Models.ViewModels
 		public int? Price { get; set; }
 
         public string? Description { get; set; }
-        public IEnumerable<Category> AllCategories { get; }
-        public IEnumerable<Tool> AllTools { get; }
+
+        [ValidateNever]
+        public IEnumerable<Category> AllCategories { get; set;  }
+
+        [ValidateNever]
+        public IEnumerable<Tool> AllTools { get; set;  }
+
+        public int CatId { get; set; }
+        public int ToolId { get; set; }
+
+        public AddNewListingViewModel()
+        {
+
+        }
 
         public AddNewListingViewModel(IEnumerable<Category> allCategories1, IEnumerable<Tool> allTools1)
         {

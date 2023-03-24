@@ -2,14 +2,14 @@
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Evaluation;
-using static Humanizer.In;
+
 
 namespace WebApplication9.Controllers
 {
     public class ToolListController : Controller
     {
 
-
+        // This controller displays a list of specified tools for rent, with a sort feature
 
         private readonly IToolListRepository _toolListRepository;
         private readonly IToolRepository _toolRepository;
@@ -24,19 +24,6 @@ namespace WebApplication9.Controllers
         public IActionResult Index(int Id)
         {
 
-            //IEnumerable<ToolList> ToolList;
-            //ViewData["PriceOrder"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
-            //switch (sortOrder)
-            //{
-            //    case "price_desc":
-            //        ToolList = _toolListRepository.ToolList.Where(p => p.ToolId == Convert.ToInt32(Id)).OrderBy(p => p.Price);
-            //        break;
-            //    default:
-            //        ToolList = _toolListRepository.ToolList.Where(p => p.ToolId == Convert.ToInt32(Id)).OrderBy(p => p.DateIn);
-            //        break;
-            //}
-
-
             IEnumerable<ToolList> ToolList;
             ToolList = _toolListRepository.ToolList.Where(p => p.ToolId == Convert.ToInt32(Id)).OrderBy(p => p.DateIn);
 
@@ -50,17 +37,11 @@ namespace WebApplication9.Controllers
             CurrentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == CategoryId)?.Id;
 
             string? CategoryColor;
-            //CategoryColor = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.Color;
             CategoryColor = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == CategoryId)?.Color;
 
 
             string? CategoryColorBg;
-            //CategoryColor = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.Color;
             CategoryColorBg = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == CategoryId)?.ColorBg;
-
-
-            // return View(_categoryRepository.AllCategories);
-            //return View(toollist);
 
 
             string? ToolDescription;
@@ -100,12 +81,10 @@ namespace WebApplication9.Controllers
             CurrentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == CategoryId)?.Id;
 
             string? CategoryColor;
-            //CategoryColor = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.Color;
             CategoryColor = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == CategoryId)?.Color;
 
 
             string? CategoryColorBg;
-            //CategoryColor = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.Color;
             CategoryColorBg = _categoryRepository.AllCategories.FirstOrDefault(c => c.Id == CategoryId)?.ColorBg;
 
             string? ToolDescription;
@@ -116,54 +95,5 @@ namespace WebApplication9.Controllers
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //private readonly IToolRepository _toolRepository;
-        //private readonly IToolListRepository _toolListRepository;
-        //public ToolListController(IToolRepository toolRepository, ToolListRepository toolListRepository)
-        //{
-        //    _toolRepository = toolRepository;
-        //    _toolListRepository = toolListRepository;
-        //}
-
-
-        //public IActionResult Index(string Id)
-        //    public IActionResult Index()
-        //{
-
-        //IEnumerable<ToolList> tools;
-        //tools = _toolListRepository.ToolList.Where(p => p.ToolId == Convert.ToInt32(Id)).OrderBy(p => p.DateIn);
-
-        //string? ToolCategory;
-        //ToolCategory = _toolRepository.AllTools.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.ToolName;
-
-
-        //return View(new ToolListViewModel(tools, ToolCategory));
-
-        //return View();
-        //}
-
-        //private IActionResult View()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

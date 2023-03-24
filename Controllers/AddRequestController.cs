@@ -7,6 +7,9 @@ using System.IO.Pipelines;
 
 namespace WebApplication9.Controllers
 {
+
+    //This controller sends an email to the tool renter alerting them that someone is interested in renting their tool
+    //This controller adds a request to the Requests table
     public class AddRequestController : Controller
     {
         private readonly IToolListRepository _toolListRepository;
@@ -24,7 +27,6 @@ namespace WebApplication9.Controllers
 
         public IActionResult Index(string Id)
         {
-
 
             int? ToolID;
             ToolID = _toolListRepository.ToolList.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.ToolId;
@@ -63,23 +65,13 @@ namespace WebApplication9.Controllers
                 return View("~/Views/AddRequest/index.cshtml", model);
             }
 
-            var requests = new Requests();
+            var requests = new Request();
                 requests.RenterId = model?.RenterId;
                 requests.ListId = Convert.ToInt32(model?.ListId); ///int.tryParse
                 requests.Message = model?.Message;
                 requests.DateIn = Convert.ToDateTime(model?.DateIn);  // datetime.tryParse
 
-                
-                        //string strDate = Request.Form["DateIn"];
-                        //string strDate2 = strDate.Substring(5, 2) + "/" + strDate.Substring(8, 2) + "/" + strDate.Substring(0, 4);
-                        //DateTime RequestDate = DateTime.ParseExact(strDate2, "MM/dd/yyyy", null);
-                        //DateTime DateIn = DateTime.Today;
-
             _requestsRepository.SaveRequest(requests);
-
-            //await _RequestsRepository.AddRequestAsync(ListId);
-            // return Content(ListId + UserId + model.message + model.datein);
-
             return RedirectToAction("Index", "Category");
 
         }

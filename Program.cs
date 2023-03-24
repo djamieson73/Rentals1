@@ -45,6 +45,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseEndpoints(endpoints =>
+{
+  endpoints.MapControllers();
+});
+
+
 app.UseAuthentication();
 app.UseAuthorization();
 

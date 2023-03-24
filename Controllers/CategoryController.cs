@@ -4,6 +4,7 @@ using Entities.Models;
 
 namespace WebApplication9
 {
+    //This controller dispays the main categories of tools
 	public class CategoryController : Controller
 	{
 
@@ -39,19 +40,6 @@ public PartialViewResult DoPartial(int id)
             return PartialView("_IndoorPartial");
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	}

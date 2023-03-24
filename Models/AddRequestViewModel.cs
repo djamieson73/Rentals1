@@ -19,7 +19,6 @@ namespace Entities.Models.ViewModels
 
         [Required(ErrorMessage = "Please select a date")]
         [Display(Name = "Request Date")]
-       // [StringLength(10)]
         [RegularExpression(@"^((19|20)\\d\\d)-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])$", ErrorMessage = "The date is not in the correct format.")]
 
         public DateTime? DateIn { get; set; }

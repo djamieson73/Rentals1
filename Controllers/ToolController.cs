@@ -8,6 +8,7 @@ namespace WebApplication9.Controllers
 {
     public class ToolController : Controller
     {
+        //This controller displays the tools for a specified category
 
         private readonly IToolRepository _toolRepository;
         private readonly ICategoryRepository _categoryRepository;
