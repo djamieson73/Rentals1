@@ -5,15 +5,15 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication9", "WebApplication9.csproj", "{496FAA3B-4A3D-445A-8C70-A4C1A2D22D7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "..\Entities\Entities.csproj", "{771A2CE1-EF1D-423A-A9E8-CCD120AEC655}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{BBC7EE85-5C25-4AC8-8868-46F97D01AB16}"
 	ProjectSection(SolutionItems) = preProject
 		DBScaffold.txt = DBScaffold.txt
 		PostmanURLEg.txt = PostmanURLEg.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Rentals", "..\API_Rentals\API_Rentals.csproj", "{108C35F2-E17A-4455-9444-BF0E76AE15C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "..\RentalEntities\Entities.csproj", "{F5E4794A-6C20-4DDB-991E-7972D5820477}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Rentals", "..\APIRentals\API_Rentals.csproj", "{5F59C497-4AA0-4C44-9B31-0C490763A255}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{496FAA3B-4A3D-445A-8C70-A4C1A2D22D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496FAA3B-4A3D-445A-8C70-A4C1A2D22D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496FAA3B-4A3D-445A-8C70-A4C1A2D22D7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{771A2CE1-EF1D-423A-A9E8-CCD120AEC655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{771A2CE1-EF1D-423A-A9E8-CCD120AEC655}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{771A2CE1-EF1D-423A-A9E8-CCD120AEC655}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{771A2CE1-EF1D-423A-A9E8-CCD120AEC655}.Release|Any CPU.Build.0 = Release|Any CPU
-		{108C35F2-E17A-4455-9444-BF0E76AE15C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{108C35F2-E17A-4455-9444-BF0E76AE15C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{108C35F2-E17A-4455-9444-BF0E76AE15C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{108C35F2-E17A-4455-9444-BF0E76AE15C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E4794A-6C20-4DDB-991E-7972D5820477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E4794A-6C20-4DDB-991E-7972D5820477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E4794A-6C20-4DDB-991E-7972D5820477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E4794A-6C20-4DDB-991E-7972D5820477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F59C497-4AA0-4C44-9B31-0C490763A255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F59C497-4AA0-4C44-9B31-0C490763A255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F59C497-4AA0-4C44-9B31-0C490763A255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F59C497-4AA0-4C44-9B31-0C490763A255}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

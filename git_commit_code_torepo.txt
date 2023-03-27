@@ -1,0 +1,16 @@
+
+   51  cd source
+   52  cd webproject2023-1
+   53  cd requestrental
+   54  git status
+   55  git add dbscaffold.txt
+   56  git status
+   57  git add DBScaffold.txt
+   58  git status
+   59  git add .
+   60  git status
+   61  git commit -m "initial commit"
+   62  git status
+   63  git push 
+   64  git status
+   65  history > git_commit_code_torepo.txt
