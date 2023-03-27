@@ -1,0 +1,25 @@
+﻿<script>
+    $(document).ready(function () {
+        $('.NO-CACHE').attr('src', function () { return $(this).attr('src') + "?a=" + Math.random() });
+    });
+</script>
+
+
+@foreach (var cat in Model.Tools)
+{
+    
+    <div style="text-align: center" runat="server" class="col-4 mb-0">
+        <div class="card; bg-transparent">
+            <div id="shadowheader" class="c-card" style="height: 190px;">
+
+                <a asp-controller=ToolList asp-route-id="@(cat.Id)" asp-action=Index class=”nav-link”>
+                    <img class="NO-CACHE" width="150px" alt="@(cat.ToolName)" src="~/img/@(cat.ToolName).jpg" />
+                </a>
+
+                <div style="height: 7px;"></div>
+                <h5 id="WhiteTitle1" class="c-card-title">@(cat.ToolName)</h5>
+            </div>
+        </div>
+        <div style="height: 25px;"></div>
+    </div>
+}

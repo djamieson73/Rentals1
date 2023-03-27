@@ -1,0 +1,43 @@
+﻿
+@model IEnumerable<Entities.Models.Category>
+
+<div id="toolviews"></div>
+
+
+
+<div style="height: 75px;"></div>
+
+<div class="container">
+    <div class="row" style="height: 1px;">
+        <div class="col-12 text-center">
+            <a style="font-weight: bold;  width: 125px; background-color: white; color: #44AB4B" asp-controller=AddNewListing asp-action=Index class="nav-link; btn btn-sm btn-success">
+                List Your Tool
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div style="height: 70px;"></div>
+
+<div class="container">
+
+    <div class="row" style="height: 350px;">
+
+        <partial name="_CategoryCard" />
+
+    </div>
+    
+    <div class="row" style="height: 90px;">
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+

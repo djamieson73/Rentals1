@@ -1,0 +1,74 @@
+﻿
+
+
+@model Entities.Models.ViewModels.ToolListViewModel
+
+
+<div id="toolviews"></div>
+
+
+    <div id="divTools" class="text-center;">
+
+            <div style="height: 20px;"></div>
+
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card text-center" style="width: 18rem;">
+              <div class="card-body">
+                    <h5 class="card-title">@Model.CurrentToolCategory for Rent</h5>
+              </div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+
+            <div style="height: 45px;"></div>
+
+            <div class="container">
+                <div class="row justify-content-center text-white">
+                    Order By:&nbsp;&nbsp;
+                    @Html.DropDownListFor(m=> m.DdlOrderByPrice, Model.DdlOrderByPrice, new {style="width:175px;"} )
+                </div>
+                <div style="height: 50px;"></div>
+            </div>
+
+            <div class="col-12" id="Container-ToolList">
+                <partial name="_ToolListCard" />
+            </div>
+
+    <div style="height: 100px;"></div>
+
+</div>
+
+@section Scripts{
+    <script type="text/javascript" >
+        $("#DdlOrderByPrice").on("change", function(){
+            var selectedoption = $(this).val();
+
+            console.log("selectedvalue " + selectedoption);
+            console.log({
+                selected_order_by: selectedoption
+            });
+
+            $.ajax({
+                url: "/toollist/RefreshToolList", 
+                contentType:"application/html; charset=utf-8",
+                type:"GET",
+                dataType:"html",
+                data: { Id: "@Model.ToolListID", priceorderby: selectedoption},
+                  success: function(data){
+                                $("#Container-ToolList").html(data);
+                            },
+                error: function () {
+                    $("#Container-ToolList").html("error occurred while refreshing");
+                }
+            });         
+        });
+    </script>
+}

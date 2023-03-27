@@ -1,0 +1,28 @@
+﻿
+
+
+        @model Entities.Models.ViewModels.ToolViewModel
+
+
+<div id="toolviews"></div>
+
+    <div id="divTools" class="text-center;">
+    <div class="container">
+        <div class="row justify-content-center">
+                    <div style="height: 20px;"></div>
+
+
+
+
+            <div class="card text-center" style="width: 18rem;">
+              <div class="card-body">
+                   <h5 class="card-title">@Model.CatName Tools</h5>
+              </div>
+            </div>
+
+            <div style="height: 25px;"></div>
+                    <partial name="_ToolCard" />
+            <div style="height: 15px;"></div>
+            </div>
+        </div>
+</div>
