@@ -1,6 +1,6 @@
-﻿@*@model List<Entities.Models.City>*@
+﻿@model List<Entities.Models.City>
 
-@model Entities.Models.City
+@*@model Entities.Models.City*@
 
 
 
@@ -11,14 +11,14 @@
     
 }
 
-
+@*
 @Html.DropDownListFor(x => Model.Id, new SelectList(Model.Name, "Id", "Name"), "Select a City ...", htmlAttributes: new { @class = "form-control", id = "ddlCity"})
 
+*@
 
 
 
-
-@*@foreach (var item in Model)
+@foreach (var item in Model)
 {
     @item.Name
-}*@
+}

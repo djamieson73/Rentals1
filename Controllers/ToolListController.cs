@@ -2,7 +2,9 @@
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Evaluation;
-
+using Microsoft.Data.SqlClient.DataClassification;
+using System.Collections.Generic;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
 namespace WebApplication9.Controllers
 {
@@ -47,9 +49,26 @@ namespace WebApplication9.Controllers
             string? ToolDescription;
             ToolDescription = _toolListRepository.ToolList.FirstOrDefault(c => c.Id == Convert.ToInt32(Id))?.Description;
 
+            int numberOfRecords = _toolListRepository.ToolList.Where(p => p.ToolId == Convert.ToInt32(Id)).Count();
+            if (numberOfRecords == 0)
+            {
+
+
+                ViewBag.noRecords = "This site is under construction. To see an example, go to the homepage and select Outdoor Tools, then Lawnmowers.";
+
+
+
+            }
+            else
+            {
+                ViewBag.noRecords = "";
+            }
+
+
             return View(new ToolListViewModel(ToolList, CurrentToolCategory, CategoryId, CurrentCategory, CategoryColor, CategoryColorBg, ToolDescription, Id));
 
 
+            
         }
 
         public IActionResult RefreshToolList(int Id, string priceorderby)

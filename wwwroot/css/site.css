@@ -86,7 +86,7 @@ button.accept-policy {
 
 #shadowheader {
     /*background-color: #6779A7;*/
-    background-color: #44AB4B;
+    background-color: #416DC5;
     /*     background-color: #88B9DD;*/
     /*  background-color: #EDBA7E;*/
     margin: 10px auto; /* just to center the div for diaplay purposes */
@@ -120,7 +120,7 @@ button.accept-policy {
 
 #WhiteTitle1 {
     color: white;
-    font-size: large;
+    font-size: medium;
 }
 
 #WhiteTitle2 {

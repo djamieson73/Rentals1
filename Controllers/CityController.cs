@@ -27,7 +27,9 @@ namespace WebApplication9.Controllers
             //using (var httpClient = new HttpClient(_clientHandler))
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://localhost:7047/api/Cities/"))  
+                // using (var response = await httpClient.GetAsync("https://localhost:7047/api/Cities/"))  
+                   using (var response = await httpClient.GetAsync("http://54.236.42.250:8081/api/Cities/"))  
+               // using (var response = await httpClient.GetAsync("http://localhost:8081/api/Cities/"))
 
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();

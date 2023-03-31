@@ -9,7 +9,8 @@
 
 
         <a asp-controller=Tool asp-route-id="@(cat.Id)" asp-action=Index class="nav-link; text-decoration-none">
-            <div style="width: 80%; height: 95%; background-color: #44AB4B;">
+            <div class="h-auto" style="width: 80%; background-color: #416DC5;">
+            @*    <div style="width: 80%; height: 95%; background-color: #416DC5;">*@
                 @*#6779A7*@
                 <div class="container">
                     <div class="row">
@@ -17,7 +18,7 @@
                         
                             <br><br>
                             
-                            <img class="NO-CACHE" id="cursorimage1" alt="Tools" src="~/img/@(cat.CatName.Substring(0, 1))2.jpg" />
+                            <img class="NO-CACHE" id="cursorimage1" alt="Tools" src="~/img/@(cat.CatName.Substring(0, 1))cat.jpg" />
                             
                         </div>
                         <div class="col-12" style="height: 25px;"></div>
@@ -27,7 +28,7 @@
                         <div class="col-12 d-flex align-items-center justify-content-center text-center">
                             <h4 style="color: lightgray">@(cat.Title)</h4>
                         </div>
-                        <div class="col-12 d-flex text-center">
+                        <div class="col-12 d-flex text-center  d-none d-md-block">
                             <h6 style="color: white">@(cat.Description)</h6>
                         </div>
                         <div class="col-12" style="height: 0px;"></div>

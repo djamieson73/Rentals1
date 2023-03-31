@@ -1,5 +1,5 @@
 ﻿@model Entities.Models.ViewModels.ToolListViewModel
-
+@using System.Linq
 
 <script>
     $(document).ready(function () {
@@ -10,20 +10,36 @@
 
 <div class="container">
     <div class="row">
+
+       
+
+                        <div align="center">
+                            <label style="font-size: medium; font-weight: bold; color: White">
+                                @ViewBag.noRecords
+                            </label>
+                        </div>
+
 @foreach (var cat in Model.ToolList)
 {
     <div id="divtest" style="text-align: center" runat="server" class="col-4 mb-0">
         <div class="card; bg-transparent">
-            <div id="shadowheader2" class="c-card" style="height: 208px;">
+                    <div id="shadowheader2" class="c-card h-auto" style="width: 105px;">
 
                     <img class="NO-CACHE" src="~/img/user_img/@(cat.Id).jpg" />
 
                 <div style="height: 5px;"></div>
 
                 <div>
-                            <label style="font-size: small; font-weight: bold; color: black">@(cat.Description)</label><br>
+                            <label style="font-size: small; font-weight: bold; color: #416DC5">
+
+                               @(cat.Description)
+
+                                </label><br>
+
                             <label style="font-size: small; font-weight: bold; color: black">$ @(cat.Price)</label>
                 </div>
+
+
 
                 <div style="height: 7px;"></div>
 
@@ -34,7 +50,7 @@
 
         <div>
             <div style="height: 15px;"></div>
-                    <a style="width: 55px; background-color: lightgray; font-size: medium; border-color: #44AB4B; border-width:thin; color: black" asp-controller=AddRequest asp-route-id="@(cat.Id)" asp-action=Index class="nav-link; btn btn-sm btn-success">
+                    <a style="width: 55px; background-color: lightgray; font-size: medium; border-color: #416DC5; border-width:thin; color: black" asp-controller=AddRequest asp-route-id="@(cat.Id)" asp-action=Index class="nav-link; btn btn-sm btn-success">
                 Rent
             </a>
             <div style="height: 15px;"></div>
